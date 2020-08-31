@@ -6,6 +6,7 @@
 import discord
 import asyncio
 import datetime
+import os
 
 client = discord.Client()
 
@@ -33,6 +34,7 @@ async def on_message(message):
                         await i.send(embed=embed)
                 except:
                     pass
-
-
-client.run('NzQ4OTA4MTE4MDY2MzMxNzA2.X0kRCQ.Hvu178pOk3MOIEkCjXUbgX7_pEg')
+                
+                
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
